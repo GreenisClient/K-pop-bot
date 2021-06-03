@@ -65,6 +65,21 @@ client.on('message', message =>{
     else if(command === 'unban'){
         client.commands.get('unban').run(client, message, args, Discord)
     }
+    else if(command === 'najim'){
+        client.commands.get('najim').run(client, message, args, Discord)
+    }
+    else if(command === 'role'){
+        client.commands.get('role').run(client, message, args, Discord)
+    }
+    else if(command === 'meme'){
+        client.commands.get('meme').run(client, message, args, Discord)
+    }
+    else if(command === 'clear'){
+        client.commands.get('clear').run(client, message, args, Discord)
+    }
+    else if(command === 'ticket'){
+        client.commands.get('ticket').run(client, message, args, Discord)
+    }
 
 
 
@@ -73,4 +88,4 @@ client.on('message', message =>{
 
 
 
-client.login(process.env.TOKEN);
+client.login([process.env.TOKEN]);

@@ -27,7 +27,7 @@ module.exports = {
             const user = bans.find(ban => ban.user.id === member.id );
 
             if (user) {
-                embed.setTitle(`Successfully  Unbanned ${user.user.tag}`)
+                embed.setTitle(`Successfully Unbanned ${user.user.tag}`)
                     .setColor('#00ff00')
                     .addField('Gebruiker ID:', user.user.id, true)
                     .addField('Gebruiker Naam:', user.user.tag, true)

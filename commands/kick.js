@@ -11,7 +11,7 @@ module.exports = {
     
     const member = message.guild.member(user);
 
-    if (!message.member.hasPermission("KICK_MEMBERS")) return message.reply("Je bent niet gemachticht dit te doen.");
+    if (!message.member.hasPermission("KICK_MEMBERS")) return;
 
     if (!message.guild.me.hasPermission("KICK_MEMBERS")) return message.reply("Geen perms");
 
@@ -46,7 +46,7 @@ module.exports = {
           .then(() => {
 
             var botEmbed = new Discord.MessageEmbed()
-            .setColor("#2EF429")
+            .setColor("#00ff00")
             .setDescription(`${kickUser} **is gekickt!**`);
   
             return message.channel.send(botEmbed);
@@ -54,8 +54,8 @@ module.exports = {
           }
 
     , LogEmbed = new Discord.MessageEmbed()
-        .setColor("#2EF429")
-        .setDescription(`${kickUser}***is gekickt voor:*** ***"${kReason}"***`))
+        .setColor("#ff0000")
+        .setDescription(`${kickUser} ***Is gekickt voor:*** ***"${kReason}"***`))
 
         const log = client.channels.cache.find(channel => channel.id === "848924989196468224");
         log.send(LogEmbed)

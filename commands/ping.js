@@ -10,9 +10,9 @@ module.exports = {
         .setTitle("Pong!")
         .setAuthor(`${message.author.username}` , message.author.displayAvatarURL())
         .setDescription(
-          `⌛ Latency is ${Math.floor(
+          `${Math.floor(
             msg.createdTimestamp - message.createdTimestamp
-          )}ms\n⏲️ API Ping is ${Math.round(client.ws.ping)}`
+          )}ms`
         )
         .setColor('#fb644c');
       msg.edit(Embed);
